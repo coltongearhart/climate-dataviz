@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "Climate Change Data Visualization"
@@ -23,7 +24,5 @@ format:
     code-tools: true
     code-block-border-left: "#2C3E50"
     highlight-style: github
-  pdf:
-    documentclass: scrreprt
     
 title-block-banner: true
