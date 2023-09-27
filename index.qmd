@@ -1,9 +1,21 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is a data visualization project on climate changed completed in graduate school.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+<!-- -   @sec-data-collection is the data collection process. -->
 
-```{r}
-1 + 1
-```
+-   @sec-visualizations goes through the entire visualization process from data manipulation to creating the final visuals.
+
+-   @sec-report is the final written report.
+
+::: callout-note
+## Quarto blog publish details
+
+This blog was created using [Quarto](https://quarto.org/) and published with Github Pages.
+:::
+
+::: callout-tip
+## Github repository for code
+
+You can find the code to reproduce this project at [coltongearhart/climate-dataviz](https://github.com/coltongearhart/climate-dataviz)
+:::

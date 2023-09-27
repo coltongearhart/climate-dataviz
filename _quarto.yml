@@ -2,22 +2,28 @@ project:
   type: book
 
 book:
-  title: "copy"
-  author: "Norah Jones"
+  title: "Climate Change Data Visualization"
+  author: "Colton Gearhart"
   date: "9/27/2023"
+  cover-image: cover.png
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    #- data-collection.qmd
+    - visualizations.qmd
+    - report.qmd
     - references.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
+    code-link: true
+    code-fold: show
+    code-tools: true
+    code-block-border-left: "#2C3E50"
+    highlight-style: github
   pdf:
     documentclass: scrreprt
-
-editor: visual
-
+    
+title-block-banner: true
