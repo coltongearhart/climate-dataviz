@@ -14,7 +14,7 @@ Next, we looked at maximum temperatures over time. This visualization has the sa
 
 ![](Files/Images/Visual-TMAX.png)
 
-So, what do these changes mean? Does a 3.5 °C increase carry any scientific importance? Let's put this into perspective. According to Peter deMenocal, a paleoclimate scientist at Columbia University in New York, approximately 5 °C separates the modern world from the last ice age, which ended about 15,000 years ago ([@geggel]). Even though this 5 °C is referring to the average global temperature, the localized increases that we have seen in such a short amount of time are a definite cause for concern.
+So, what do these changes mean? Does a 3.5 °C increase carry any scientific importance? Let's put this into perspective. According to Peter deMenocal, a paleoclimate scientist at Columbia University in New York, approximately 5 °C separates the modern world from the last ice age, which ended about 15,000 years ago [@geggel]. Even though this 5 °C is referring to the average global temperature, the localized increases that we have seen in such a short amount of time are a definite cause for concern.
 
 Finally, we visualized precipitation levels (mm). Again, this figure has the same setup as the previous figures.
 

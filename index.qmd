@@ -11,7 +11,7 @@ This is a data visualization project on climate changed completed in graduate sc
 ::: callout-note
 ## Quarto blog publish details
 
-This blog was created using [Quarto](https://quarto.org/) and published with Github Pages.
+This book was created using [Quarto](https://quarto.org/) and published with Github Pages.
 :::
 
 ::: callout-tip
