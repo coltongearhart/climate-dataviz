@@ -6,19 +6,19 @@ For almost a decade now, climate change has been one of the most contentious iss
 
 We first visualized minimum temperatures (°C) over the past several decades. LOESS curves were fit for the daily data and compared to the average minimum temperature during the first five years of data collection. In addition, monthly averages were overlaid to get a sense of variation.
 
-![](Files/Images/Visual-TMIN.png)
+![](files/images/Visual-TMIN.png)
 
 In all three locations, we can see an upward trend indicating that average minimum temperatures have been increasing. The more drastic changes can be seen in Alaska and Hawaii, where the current averages are 4.58 °C and 1.59 °C above the baseline for the first five years, respectively. Additionally, monthly averages for Hawaii seem to shift upward as the years increase. These trends seem to give evidence to climate change.
 
 Next, we looked at maximum temperatures over time. This visualization has the same setup as the previous figure. We can see that Alaska and Australia are experiences upward trends again, while Hawaii seems to increase until about 1970 and then begins to decrease.
 
-![](Files/Images/Visual-TMAX.png)
+![](files/images/Visual-TMAX.png)
 
 So, what do these changes mean? Does a 3.5 °C increase carry any scientific importance? Let's put this into perspective. According to Peter deMenocal, a paleoclimate scientist at Columbia University in New York, approximately 5 °C separates the modern world from the last ice age, which ended about 15,000 years ago [@geggel]. Even though this 5 °C is referring to the average global temperature, the localized increases that we have seen in such a short amount of time are a definite cause for concern.
 
 Finally, we visualized precipitation levels (mm). Again, this figure has the same setup as the previous figures.
 
-![](Files/Images/Visual-PRCP.png)
+![](files/images/Visual-PRCP.png)
 
 The average precipitation levels seem to be fairly constant and not far off of the average during the first five years for all three locations. However, one thing to keep in mind is that the effects of climate change are regionalized; some areas may experience harsher effects than others. Also, the selected locations are all close to the coast, and the ocean acts like a buffer to moderate the climate.
 

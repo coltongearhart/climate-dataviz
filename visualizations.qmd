@@ -63,7 +63,7 @@ Data is from the Daily Global Historical Climatology Network (GHCN). It only inc
 #| label: read-data
 
 # read in data
-(data_climate_raw <- read_csv("Files/Data/climate-data.csv",
+(data_climate_raw <- read_csv("files/data/climate-data.csv",
                          col_names = TRUE, col_types = c("ccDcnccc")))
 
 ```

@@ -1,2 +1,8 @@
-/.quarto/
+.DS_Store
 .Rproj.user
+.Rhistory
+.Ruserdata
+/.quarto/
+*.html
+*_cache/
+*_files/

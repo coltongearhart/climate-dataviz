@@ -6,7 +6,7 @@ book:
   title: "Climate Change Data Visualization"
   author: "Colton Gearhart"
   date: "9/27/2023"
-  cover-image: cover.png
+  cover-image: climate-dataviz.png
   chapters:
     - index.qmd
     #- data-collection.qmd
