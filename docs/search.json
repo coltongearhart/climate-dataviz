@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "Climate Change Data Visualization",
     "section": "",
-    "text": "Preface\nThis is a data visualization project on climate changed completed in graduate school.\n\n\nsec-visualizations goes through the entire visualization process from data manipulation to creating the final visuals.\n2  Report is the final written report.\n\n\n\n\n\n\n\nQuarto blog publish details\n\n\n\nThis book was created using Quarto and published with Github Pages.\n\n\n\n\n\n\n\n\nGithub repository for code\n\n\n\nYou can find the code to reproduce this project at coltongearhart/climate-dataviz",
+    "text": "Preface\nThis is a data visualization project on climate changed completed in graduate school.\n\n\n1  Visualizations goes through the entire visualization process from data manipulation to creating the final visuals.\n2  Report is the final written report.\n\n\n\n\n\n\n\nQuarto blog publish details\n\n\n\nThis book was created using Quarto and published with Github Pages.\n\n\n\n\n\n\n\n\nGithub repository for code\n\n\n\nYou can find the code to reproduce this project at coltongearhart/climate-dataviz",
     "crumbs": [
       "Preface"
+    ]
+  },
+  {
+    "objectID": "visualizations.html#r-setup",
+    "href": "visualizations.html#r-setup",
+    "title": "1  Visualizations",
+    "section": "\n1.1 R setup",
+    "text": "1.1 R setup\n\nCode# load packages\nlibrary(tidyverse)\nlibrary(magrittr)\nlibrary(lubridate)\nlibrary(parallel) # for mclappy()\n\n# create default storytelling with data theme\ntheme_swd &lt;- theme_minimal() + \n  theme(\n    # titles and captions\n    plot.title = element_text(size = rel(1.75),\n                              color = \"grey30\"),\n    plot.subtitle = element_text(size = rel(1.25),\n                                 color = \"grey30\"),\n    plot.caption = element_text(hjust = 0,\n                                color = \"grey30\"),\n    # axes\n    axis.title.x = element_text(hjust = 0,\n                                color = \"grey30\"),\n    axis.title.y = element_text(hjust = 1,\n                                color = \"grey30\"),\n    axis.line = element_line(color = \"grey90\"),\n    axis.ticks = element_line(color = \"grey90\"),\n    # plot background and gridlines\n    panel.background = element_blank(),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank(),\n    # legend\n    legend.title = element_text(color = \"grey30\"),\n    legend.text = element_text(color = \"grey30\")\n  )\n\n# set global plot theme\ntheme_set(theme_swd)\n\n# disable scientific notation for readability purposes\noptions(scipen = 999)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Visualizations</span>"
     ]
   },
   {
@@ -77,16 +87,6 @@
     "text": "Geggel, Laura. n.d. “How Would Just 2 Degrees of Warming Change\nthe Planet?” https://www.livescience.com/58891-why-2-degrees-celsius-increase-matters.html.\n\n\nMenne, Matthew J., Imke Durre, Bryant Korzeniewski, Shelley McNeill,\nKristy Thomas, Xungang Yin, Steven Anthony, et al. 2012. “Global\nHistorical Climatology Network - Daily (GHCN-Daily), Version 3.”\nNOAA National Centers for Environmental Information. https://doi.org/10.7289/V5D21VHZ.\n\n\nNational Geographic. n.d. “Causes and Effects of Climate\nChange.” https://www.nationalgeographic.com/environment/article/global-warming-effects.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "visualizations.html#r-setup",
-    "href": "visualizations.html#r-setup",
-    "title": "1  Visualizations",
-    "section": "\n1.1 R setup",
-    "text": "1.1 R setup\n\nCode# load packages\nlibrary(tidyverse)\nlibrary(magrittr)\nlibrary(lubridate)\nlibrary(parallel) # for mclappy()\n\n# create default storytelling with data theme\ntheme_swd &lt;- theme_minimal() + \n  theme(\n    # titles and captions\n    plot.title = element_text(size = rel(1.75),\n                              color = \"grey30\"),\n    plot.subtitle = element_text(size = rel(1.25),\n                                 color = \"grey30\"),\n    plot.caption = element_text(hjust = 0,\n                                color = \"grey30\"),\n    # axes\n    axis.title.x = element_text(hjust = 0,\n                                color = \"grey30\"),\n    axis.title.y = element_text(hjust = 1,\n                                color = \"grey30\"),\n    axis.line = element_line(color = \"grey90\"),\n    axis.ticks = element_line(color = \"grey90\"),\n    # plot background and gridlines\n    panel.background = element_blank(),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank(),\n    # legend\n    legend.title = element_text(color = \"grey30\"),\n    legend.text = element_text(color = \"grey30\")\n  )\n\n# set global plot theme\ntheme_set(theme_swd)\n\n# disable scientific notation for readability purposes\noptions(scipen = 999)",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Visualizations</span>"
     ]
   }
 ]
