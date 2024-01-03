@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.376">
+<meta name="generator" content="quarto-1.4.533">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -101,7 +101,7 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
@@ -116,6 +116,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -128,14 +129,14 @@ div.csl-indent {
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./report.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Report</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -162,7 +163,7 @@ div.csl-indent {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Climate Change Data Visualization</a> 
@@ -202,7 +203,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -219,35 +220,18 @@ div.csl-indent {
 
 
 
+
 <section id="climate-change-fact-or-fallacy" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="climate-change-fact-or-fallacy">Climate Change: Fact or Fallacy?</h2>
 <p>For almost a decade now, climate change has been one of the most contentious issues. Claims of “global warming” are cited on a daily basis <span class="citation" data-cites="nationalgeographic">(<a href="references.html#ref-nationalgeographic" role="doc-biblioref">National Geographic, n.d.</a>)</span>, but are these substantiated? Or is climate change just being overstated? To assess the validity of our concerns, we analyzed data from the National Climatic Data Center (NOAA) through the Global Historical Climatology Network (GHCN) database <span class="citation" data-cites="menne2012">(<a href="references.html#ref-menne2012" role="doc-biblioref">Menne et al. 2012</a>)</span>. It contains data collected daily from weather stations all over the world from as far back as 1760. To get a sense of how the climate is behaving in different regions of the world, we only analyzed data from three stations in Alaska, Australia and Hawaii. This gave us data from locations with varying latitudes.</p>
 <p>We first visualized minimum temperatures (°C) over the past several decades. LOESS curves were fit for the daily data and compared to the average minimum temperature during the first five years of data collection. In addition, monthly averages were overlaid to get a sense of variation.</p>
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div>
-<img src="files/images/Visual-TMIN.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="img-fluid figure-img">
-</div>
-</figure>
-</div>
+<p><img src="files/images/Visual-TMIN.png" class="img-fluid"></p>
 <p>In all three locations, we can see an upward trend indicating that average minimum temperatures have been increasing. The more drastic changes can be seen in Alaska and Hawaii, where the current averages are 4.58 °C and 1.59 °C above the baseline for the first five years, respectively. Additionally, monthly averages for Hawaii seem to shift upward as the years increase. These trends seem to give evidence to climate change.</p>
 <p>Next, we looked at maximum temperatures over time. This visualization has the same setup as the previous figure. We can see that Alaska and Australia are experiences upward trends again, while Hawaii seems to increase until about 1970 and then begins to decrease.</p>
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div>
-<img src="files/images/Visual-TMAX.png" id="fig-539a35d47e664c97a50115a146a7f1bd-2" class="img-fluid figure-img">
-</div>
-</figure>
-</div>
+<p><img src="files/images/Visual-TMAX.png" class="img-fluid"></p>
 <p>So, what do these changes mean? Does a 3.5 °C increase carry any scientific importance? Let’s put this into perspective. According to Peter deMenocal, a paleoclimate scientist at Columbia University in New York, approximately 5 °C separates the modern world from the last ice age, which ended about 15,000 years ago <span class="citation" data-cites="geggel">(<a href="references.html#ref-geggel" role="doc-biblioref">Geggel, n.d.</a>)</span>. Even though this 5 °C is referring to the average global temperature, the localized increases that we have seen in such a short amount of time are a definite cause for concern.</p>
 <p>Finally, we visualized precipitation levels (mm). Again, this figure has the same setup as the previous figures.</p>
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-3" class="quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div>
-<img src="files/images/Visual-PRCP.png" id="fig-539a35d47e664c97a50115a146a7f1bd-3" class="img-fluid figure-img">
-</div>
-</figure>
-</div>
+<p><img src="files/images/Visual-PRCP.png" class="img-fluid"></p>
 <p>The average precipitation levels seem to be fairly constant and not far off of the average during the first five years for all three locations. However, one thing to keep in mind is that the effects of climate change are regionalized; some areas may experience harsher effects than others. Also, the selected locations are all close to the coast, and the ocean acts like a buffer to moderate the climate.</p>
 <p>To wrap up, the visualizations presented here have given evidence of a very concerning phenomenon. Climate change will likely remain a hot button issue, but hopefully we can recognize the importance of it and work together to keep a healthy Earth!</p>
 
@@ -447,15 +431,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -463,6 +460,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const anchorLink = note.querySelector('a.anchorjs-link');
       if (anchorLink) {
         anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
       }
       return note.innerHTML;
     }
@@ -506,6 +506,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -581,7 +604,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
-        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);
@@ -665,12 +687,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./visualizations.html" class="pagination-link">
+      <a href="./visualizations.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualizations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
+      <a href="./references.html" class="pagination-link" aria-label="References">
         <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

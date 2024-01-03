@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.376">
+<meta name="generator" content="quarto-1.4.533">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Climate Change Data Visualization - 1&nbsp; Visualizations</title>
 <style>
@@ -76,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
@@ -91,21 +91,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 </head>
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./visualizations.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Visualizations</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -128,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Climate Change Data Visualization</a> 
     </div>
@@ -166,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
@@ -208,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content quarto-banner-title-block" id="quarto-document-content"><section id="r-setup" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="r-setup">
 <span class="header-section-number">1.1</span> R setup</h2>
 <div class="cell" data-hash="visualizations_cache/html/r-setup_edad89bab15bdf80018e068bf7b413ce">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># load packages</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># load packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span></span>
@@ -251,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.2</span> Read in data</h2>
 <p>Data is from the Daily Global Historical Climatology Network (GHCN). It only includes three selected stations (one in AK, AU and HI) and ranges from years 1950 to 2019. The units for elements of interest (TMIN &amp; TMAX: tenths of degrees celsius; PRCP: tenths of mm; SNOW &amp; SNWD: mm).</p>
 <div class="cell" data-hash="visualizations_cache/html/read-data_a37ad51b7d3ca0cc6606c60c37512959">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># read in data</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># read in data</span></span>
 <span><span class="op">(</span><span class="va">data_climate_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"files/data/climate-data.csv"</span>,</span>
 <span>                         col_names <span class="op">=</span> <span class="cn">TRUE</span>, col_types <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ccDcnccc"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
@@ -277,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.3.1</span> Basic data cleaning</h3>
 <p>Now lets do some basic cleaning of the data, including removing unnecessary columns and filtering to only the initial elements of interest.</p>
 <div class="cell" data-hash="visualizations_cache/html/clean-data_ae3a3126780e9aab0060c96feebb25b2">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># clean up data</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># clean up data</span></span>
 <span><span class="co"># -&gt; remove unnecessary columns</span></span>
 <span><span class="co"># -&gt; filter to only desired elements</span></span>
 <span><span class="op">(</span><span class="va">data_clean</span> <span class="op">&lt;-</span> <span class="va">data_climate_raw</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -305,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.3.2</span> Missing data</h3>
 <p>Next step is to check to see if there is any missing data. To do this, we can count the number of observations for each year in each respective group. We expect there to be one observation per day, so ideally approximately 365 observations per year at each location for each measurement.</p>
 <div class="cell" data-hash="visualizations_cache/html/check-missing_cbe991b88cc7913a2e891da177c9abc5">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check dataset for years with missing data</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check dataset for years with missing data</span></span>
 <span><span class="co"># -&gt; count the number of days within each year that have a measurement (for all elements from each location)</span></span>
 <span><span class="op">(</span><span class="va">data_years</span> <span class="op">&lt;-</span> <span class="va">data_clean</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">Location</span>,</span>
@@ -330,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>In order to find things to look into more, lets create a visual for a quick inspection of the count data.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-days-in-year_c8fdcc8aaf781fbfab22e8c041fcdde8">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create plot to visualize the wide data, which represents the total number of days with observations for each year</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create plot to visualize the wide data, which represents the total number of days with observations for each year</span></span>
 <span><span class="co"># do this for each location and element combination</span></span>
 <span><span class="co"># add a horizontal line at 365 days, which contextually represents data collected everyday of said year</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
@@ -341,11 +367,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>             color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid</a></span><span class="op">(</span><span class="va">Location</span> <span class="op">~</span> <span class="va">Element</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-days-in-year" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-days-in-year" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-days-in-year-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-days-in-year-1.png" id="fig-days-in-year" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-days-in-year-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -365,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Now that we have visually inspected the count data, we can make some initial decisions about which data to work or not work with. Getting these out of the way before diving in more will make it easier.</p>
 <div class="cell" data-hash="visualizations_cache/html/keep-elements_9bce59955dbbc3aa08d1512347ddde7a">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># start refining the data</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># start refining the data</span></span>
 <span><span class="co"># -&gt; keep only the elements that are going to be visualized</span></span>
 <span><span class="op">(</span><span class="va">data_climate</span> <span class="op">&lt;-</span> <span class="va">data_clean</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">Element</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TMIN"</span>,</span>
@@ -390,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Now lets look into the count data with only the desired elements to see exactly what’s going on.</p>
 <div class="cell" data-hash="visualizations_cache/html/inspect-elements_ebf8721c2ba5c0026ebe25ea476929fb">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># look further into count data</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># look further into count data</span></span>
 <span><span class="co"># convert to wide data to be able to compactly look at how much data there is (or is not) for each element</span></span>
 <span><span class="co"># can also manually sort by year to look at locations within year when inspecting</span></span>
 <span><span class="op">(</span><span class="va">data_years_wide</span> <span class="op">&lt;-</span> <span class="va">data_climate</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -423,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Also note that there is no data in the original dataset from 2003 for some reason. This will obviously show up in the final visuals, but nothing that can be done about it (although measures will be taken to ensure accurate portrayals as described later).</p>
 <div class="cell" data-hash="visualizations_cache/html/remove-years_fc72325a3039b6573d8b8ac063aba547">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># continue refining climate data to move forward with</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># continue refining climate data to move forward with</span></span>
 <span><span class="co"># -&gt; remove years with not good data</span></span>
 <span><span class="op">(</span><span class="va">data_climate</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/compound.html">%&lt;&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="va">Location</span> <span class="op">==</span> <span class="st">"AK"</span> <span class="op">&amp;</span> <span class="op">(</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/year.html">year</a></span><span class="op">(</span><span class="va">Date</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">1980</span> <span class="op">|</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/year.html">year</a></span><span class="op">(</span><span class="va">Date</span><span class="op">)</span> <span class="op">==</span> <span class="fl">2019</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -450,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.3.3</span> Extra observations</h3>
 <p>Now lets look into data from 2004. As of now, we are not sure why there are multiple observations for each date across all elements.</p>
 <div class="cell" data-hash="visualizations_cache/html/check_data_2004_2f8c5feb1d84d92597e80fdeab34f711">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># confirm this by counting the number of observations per day for each element / location combo</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># confirm this by counting the number of observations per day for each element / location combo</span></span>
 <span><span class="co"># -&gt; filter to only 2004 data</span></span>
 <span><span class="co"># -&gt; split into dataframe subsets for each element</span></span>
 <span><span class="co"># -&gt; do the counting on each subset</span></span>
@@ -487,7 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>We see <span class="math inline">\(n = 2\)</span>, so multiple observations for each day is confirmed. To consolidate these, we are going to average all observations from a single day. This is to have just a single value per day, which will ensure that each day has the same weight when taking monthly averages later. If one day has more than one record, then it would be like there is an extra day, which is an inaccurate interpretation.</p>
 <div class="cell" data-hash="visualizations_cache/html/adjust_data_2004_fcea69305b9157771d29b9a0ce679b84">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># adjust data from 2004</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># adjust data from 2004</span></span>
 <span><span class="co"># -&gt; filter climate data to only 2004</span></span>
 <span><span class="co"># -&gt; group by identifying variables</span></span>
 <span><span class="co"># -&gt; average the multiple observations</span></span>
@@ -515,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Now lets count the adjusted data to confirm that is has been correctly addressed.</p>
 <div class="cell" data-hash="visualizations_cache/html/recheck_data_2004_19e7862bd3dd4d13dc93de98381ea657">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># now run the summarized data back through the checking procedure to confirm that there is now only one obs per day</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># now run the summarized data back through the checking procedure to confirm that there is now only one obs per day</span></span>
 <span><span class="op">(</span><span class="va">data_2004_recheck</span> <span class="op">&lt;-</span> <span class="va">data_2004</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span><span class="op">(</span><span class="va">.</span><span class="op">$</span><span class="va">Element</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/parallel/mclapply.html">mclapply</a></span><span class="op">(</span>FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">element_data</span><span class="op">)</span> <span class="op">{</span></span>
@@ -547,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.3.4</span> Final modifications</h3>
 <p>Now can make the final refinements to the climate dataset.</p>
 <div class="cell" data-hash="visualizations_cache/html/more-data-manipulations_22df0c82f3173f925799110f47dc0310">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># now continue with refining climate dataset</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># now continue with refining climate dataset</span></span>
 <span><span class="co"># -&gt; remove original 2004 data</span></span>
 <span><span class="co"># -&gt; add in the corrected 2004 data to the rest of the correct data</span></span>
 <span><span class="co"># -&gt; sort in a logical way</span></span>
@@ -579,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>As a final confirmation, lets recreate the first visual with the new refined dataset.</p>
 <div class="cell" data-hash="visualizations_cache/html/check-final-data_b8dc8744b4d7041fa851a0a6e1435ee4">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check years for final dataset by running the data through the counting and plotting process from above</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># check years for final dataset by running the data through the counting and plotting process from above</span></span>
 <span><span class="va">data_climate</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">Location</span>,</span>
 <span>        year <span class="op">=</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/year.html">year</a></span><span class="op">(</span><span class="va">Date</span><span class="op">)</span>,</span>
@@ -593,10 +621,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">400</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid</a></span><span class="op">(</span><span class="va">Location</span> <span class="op">~</span> <span class="va">Element</span><span class="op">)</span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
-<img src="visualizations_files/figure-html/check-final-data-1.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="img-fluid figure-img" data-fig-pos="hold" width="672">
-</div>
+<div>
+<figure class="figure"><p><img src="visualizations_files/figure-html/check-final-data-1.png" class="img-fluid figure-img" data-fig-pos="hold" width="672"></p>
 </figure>
 </div>
 </div>
@@ -609,7 +635,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.4.1</span> Monthly averages</h3>
 <p>First is the monthly averages for each month within each location.</p>
 <div class="cell" data-hash="visualizations_cache/html/data-monthly-average_1f65d555a32e405cf96b41989d3db2f3">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset that contains average values for each month by location</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset that contains average values for each month by location</span></span>
 <span><span class="co"># this is a final plotting dataset</span></span>
 <span><span class="co"># -&gt; extract the year and month of the date for grouping purposes </span></span>
 <span><span class="co"># -&gt; set day to be the last day of each month and average the values for each month</span></span>
@@ -656,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.4.2</span> Projections</h3>
 <p>Now we are going to create the dataset to model the different types of projections that will be included in the final plot. This requires several intermediate datasets before they can be combined into a final projections dataset. Below is the first one, which will contain information about the intitial average values to be used for comparison purposes.</p>
 <div class="cell" data-hash="visualizations_cache/html/data-projections_ceb8d2587465d25a172e4dc00b37bc16">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a dataset that will be used to plot a horizontal line</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a dataset that will be used to plot a horizontal line</span></span>
 <span><span class="co"># this is an intermediate dataset for the final plotting data</span></span>
 <span><span class="co"># the y value should equal the average value during first five years of data collection</span></span>
 <span><span class="co"># and the x values will be the first and last dates of data collection so that the line spans the entire time frame</span></span>
@@ -696,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Next is the second intermediate dataset, which will capture information based on a smooth curve fitted to the daily data.</p>
 <div class="cell" data-hash="visualizations_cache/html/data-late-pred_1a9cd4c88b53346fcf3e1718db10bb09">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># goal is to get the predicted value from the last day of data collection based off some model</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># goal is to get the predicted value from the last day of data collection based off some model</span></span>
 <span><span class="co"># going to do loess regression with response as value (value) and predictor as number of days after (days_since) a round arbitrary start date (01/01/1950) that is before earliest data point </span></span>
 <span><span class="co"># this is an intermediate dataset for the final plotting data</span></span>
 <span><span class="co"># -&gt; calculate explanatory variable</span></span>
@@ -751,7 +777,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Now we can combine both the initial average info and the predictions from the model into the final projections dataset.</p>
 <div class="cell" data-hash="visualizations_cache/html/data-projections-final_4115256cb5fe1d07bb391cf3645ad4d1">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset that contains all of the information related to projections, both the simple baseline average and the fancy model</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset that contains all of the information related to projections, both the simple baseline average and the fancy model</span></span>
 <span><span class="co"># this is a final plotting dataset</span></span>
 <span><span class="co"># -&gt; add info about the final predicted value to the baseline data</span></span>
 <span><span class="co"># now need to create the information about the error bar, which will summarize the differences between the two different projection methods</span></span>
@@ -797,7 +823,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Now lets create a dataset that can reflect the conclusion we arrived at.</p>
 <div class="cell" data-hash="visualizations_cache/html/data-windows_92e9b3df534157cf8d97b830c3258d99">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset with the information needed for y limits of each panel</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create dataset with the information needed for y limits of each panel</span></span>
 <span><span class="co"># this is a final plotting dataset </span></span>
 <span><span class="co"># -&gt; start with the monthly average values dataset because that data defines the y scale </span></span>
 <span><span class="co"># -&gt; group by element and location</span></span>
@@ -965,7 +991,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.5.2</span> Function for implementation</h3>
 <p>To implement these, lets define a function that will create a ggplot object with all of the above features that will be common across all plots. This is just for more concise code later; element specific features (such as labels and scale colors) will be added on individually later. And formal titles and captions will be added on last.</p>
 <div class="cell" data-hash="visualizations_cache/html/function-common-plot_2f90ce785527d6a77e64c6c600afacbd">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># define a function that will return a ggplot object with all of the above features</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># define a function that will return a ggplot object with all of the above features</span></span>
 <span><span class="co"># -&gt; only need to specify character strings for the element of interest and the main color of the line plots</span></span>
 <span><span class="co"># --&gt; default color value is black (which is neutralish) just so that can run code if don't want to specify one</span></span>
 <span><span class="co"># this will contain only plot feature that are common across all elements</span></span>
@@ -1048,38 +1074,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.5.3</span> Minumum temperatures</h3>
 <p>Create base plot for minimum temperatures. This lets the facetting control the <span class="math inline">\(y\)</span> scales and does not activate the window setting feature.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmin-common_52e91955fbf6a09c24e62819771723b3">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize TMIN</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize TMIN</span></span>
 <span><span class="co"># -&gt; first visualize base plot </span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMIN"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"dodgerblue1"</span>,</span>
 <span>                window_setting <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmin-common" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmin-common" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmin-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmin-common-1.png" id="fig-tmin-common" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmin-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Now incorporate the specified windows into each panel.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmin-window_283a237c10de21a3abaf9ab831fb93d3">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; now add window setting feature</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; now add window setting feature</span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMIN"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"dodgerblue1"</span>,</span>
 <span>                window_setting <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmin-window" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmin-window" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmin-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmin-window-1.png" id="fig-tmin-window" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmin-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>We see that this addition has the intended affect of setting equally wide and centered windows for each panels <span class="math inline">\(y\)</span> axis, which improves the image and allows for accurate visual comparisons of the error bars. So lets keep it! Now we can create the final visualization for minimum temperatures.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmin-final_c287cc87241379933740f5088a0c2446">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
 <span><span class="op">(</span><span class="va">plot_tmin</span> <span class="op">&lt;-</span> <span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMIN"</span>,</span>
 <span>                             color <span class="op">=</span> <span class="st">"dodgerblue1"</span>,</span>
 <span>                             window_setting <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
@@ -1089,11 +1119,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>      caption <span class="op">=</span> <span class="st">"Data source: Daily Global Historical Climatology Network (GHCN) \nPlot by Colton Gearhart"</span>,</span>
 <span>      y <span class="op">=</span> <span class="st">"Temperature (˚C)"</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmin-final" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmin-final" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmin-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmin-final-1.png" id="fig-tmin-final" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmin-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1101,37 +1133,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.5.4</span> Maximum temperatures</h3>
 <p>Now we can do the same process for maximumum temperatures.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmax-common_fa442a8a8d9dde3923cdd5ae199bb4bb">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize TMAX</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize TMAX</span></span>
 <span><span class="co"># -&gt; first create base plot </span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMAX"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"dodgerblue4"</span>, </span>
 <span>                window_setting <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmax-common" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmax-common" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmax-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmax-common-1.png" id="fig-tmax-common" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmax-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5
+</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmax-window_a7fbdca26e03556ef3ae9d8ee6ccd762">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># this improves image again, so keep it!</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># this improves image again, so keep it!</span></span>
 <span><span class="co"># -&gt; now add window setting feature</span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMAX"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"dodgerblue4"</span>,</span>
 <span>                window_setting <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmax-window" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmax-window" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmax-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmax-window-1.png" id="fig-tmax-window" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmax-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.6
+</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-hash="visualizations_cache/html/fig-tmax-final_8b4bdfdced26d25bb4d36538f8b30e78">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
 <span><span class="co"># this is the final visualization for maximum temperatures</span></span>
 <span><span class="op">(</span><span class="va">plot_tmax</span> <span class="op">&lt;-</span> <span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"TMAX"</span>,</span>
 <span>                              color <span class="op">=</span> <span class="st">"dodgerblue4"</span>,</span>
@@ -1142,11 +1178,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>      caption <span class="op">=</span> <span class="st">"Data source: Daily Global Historical Climatology Network (GHCN) \nPlot by Colton Gearhart"</span>,</span>
 <span>      y <span class="op">=</span> <span class="st">"Temperature (˚C)"</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-tmax-final" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-tmax-final" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tmax-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-tmax-final-1.png" id="fig-tmax-final" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-tmax-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.7
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1154,36 +1192,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.5.5</span> Precipitation levels</h3>
 <p>And again for precipitation levels.</p>
 <div class="cell" data-hash="visualizations_cache/html/fig-prcp-common_f053e5937f3648bc787d9632db43cea0">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize PRCP</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># visualize PRCP</span></span>
 <span><span class="co">#  -&gt; first create base plot </span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"PRCP"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"turquoise"</span>,</span>
 <span>                window_setting <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-prcp-common" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-prcp-common" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-prcp-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-prcp-common-1.png" id="fig-prcp-common" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-prcp-common-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.8
+</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-hash="visualizations_cache/html/fig-prcp-window_c3fa989c4b5aee82c4aece522b4c82ab">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; now add window setting feature</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; now add window setting feature</span></span>
 <span><span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"PRCP"</span>,</span>
 <span>                color <span class="op">=</span> <span class="st">"turquoise"</span>,</span>
 <span>                window_setting <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-prcp-window" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-prcp-window" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-prcp-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-prcp-window-1.png" id="fig-prcp-window" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-prcp-window-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.9
+</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-hash="visualizations_cache/html/fig-prcp-final_99dd2bc462af514c9ac12a7d6fefe439">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># -&gt; then add the rest of the layers with formal info</span></span>
 <span><span class="op">(</span><span class="va">plot_prcp</span> <span class="op">&lt;-</span> <span class="fu">fun_common_plot</span><span class="op">(</span>element <span class="op">=</span> <span class="st">"PRCP"</span>,</span>
 <span>                             color <span class="op">=</span> <span class="st">"turquoise"</span>,</span>
 <span>                             window_setting <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>  </span>
@@ -1193,11 +1235,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>      caption <span class="op">=</span> <span class="st">"Data source: Daily Global Historical Climatology Network (GHCN) \nPlot by Colton Gearhart"</span>,</span>
 <span>      y <span class="op">=</span> <span class="st">"Precipitation (mm)"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
-<div id="fig-prcp-final" class="quarto-figure quarto-figure-center anchored" data-fig-pos="hold" width="672">
-<figure class="quarto-float quarto-float-fig figure"><div>
+<div id="fig-prcp-final" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-pos="hold">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-prcp-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="visualizations_files/figure-html/fig-prcp-final-1.png" id="fig-prcp-final" class="img-fluid figure-img" data-fig-pos="hold" width="672">
 </div>
-</figure>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-prcp-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.10
+</figcaption></figure>
 </div>
 </div>
 </div>
@@ -1206,7 +1250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1.6</span> Save plots</h2>
 <p>Below is code that can be used to save ggplots.</p>
 <div class="cell" data-hash="visualizations_cache/html/save-plots_f39749c8b673c5c7b1867cf48946e660">
-<details open=""><summary>Code</summary><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># save plots</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># save plots</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>filename <span class="op">=</span> <span class="st">"Files/Images/Visual-TMIN.png"</span>,</span>
 <span>       plot <span class="op">=</span> <span class="va">plot_tmin</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>filename <span class="op">=</span> <span class="st">"Files/Images/Visual-TMAX.png"</span>,</span>
@@ -1398,15 +1442,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1414,6 +1471,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const anchorLink = note.querySelector('a.anchorjs-link');
       if (anchorLink) {
         anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
       }
       return note.innerHTML;
     }
@@ -1457,6 +1517,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1532,7 +1615,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener(
       "resize",
       throttle(() => {
-        console.log("RESIZE");
         elRect = undefined;
         if (selectedAnnoteEl) {
           selectCodeLines(selectedAnnoteEl);
@@ -1614,12 +1696,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
+      <a href="./index.html" class="pagination-link  aria-label=" preface="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./report.html" class="pagination-link">
+      <a href="./report.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Report</span>">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Report</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
